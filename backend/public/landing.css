@@ -1,0 +1,53 @@
+:root {
+    --t: 20;
+    --s: var(--t);
+}
+
+.countdown {
+    --s: var(--t);
+    display: grid;
+    margin: 1em auto;
+    width: 20em;
+    height: 20em;
+    animation: t var(--t)s linear infinite;
+}
+
+.countdown::after {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: center;
+    font: 5em/2 'ubuntu mono', consolas, monaco, monospace;
+    counter-reset: s var(--s);
+    content: '0:' counter(s, decimal-leading-zero);
+}
+
+@keyframes t {
+    to {
+        --s: 0;
+    }
+}
+
+
+@keyframes t {
+    to {
+        --t: 0;
+    }
+}
+
+svg {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+circle[r] {
+    fill: none;
+    stroke: silver;
+}
+
+circle[r] + circle[r] {
+    --k: calc(var(--t)/20);
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+    stroke: linear-gradient(to right, #8a9b0f calc(var(--k)*100%), #940a3d);
+    stroke-dasharray: var(--k) 1;
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <!-- <link rel="stylesheet" href="landing.css"> -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Your Page Title</title>
+  <style>
+.switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            background-color: #ccc;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .slider {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            left: 3px;
+            bottom: 2px;
+            background-color: #5dc7c2;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+        .active .slider {
+            left: 25.3px; /* Adjust the left position for the active state */
+        }
+  </style>
+</head>
+<body style="background-color:#191d28; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-between align-items-center" style="padding: 30px 30px; margin: 0 0;">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                <a href="/"><img src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" style="width: 60%;"></a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="d-flex ">
+                    <div class="dropdown mx-2">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          INR
+                        </a>
+                      
+                        <ul class="dropdown-menu mx-2">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown mx-2">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          BTC
+                        </a>
+                      
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="mx-2"><button type="button" class="btn btn-secondary">BUY BTC</button></div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-end" style="color: #17a2b8 ;">
+                <div class="mx-2">
+                    <button type="button" class="btn btn-primary">Connect Telegram <i class="fa fa-telegram" style="font-size:20px;color:white"></i></button>
+                </div>
+                <div class="mx-2">
+                    <label id="toggleSlider" class="switch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="Container-fluid" style="padding: 0px 30px;">
+        <div class="d-flex justify-content-around align-items-center average-header" style="padding: 10px 0px;">
+    
+            <div class="text-center my-3">
+                <div class="average-header-maintext color-green" style="color: #5dc7c2; font-weight: 400; font-size: 50px;">0.25%</div>
+                <div class="average-header-subHeading" style="color: grey;font-size: 20px;">5 Mins</div>
+            </div>
+    
+            <div class="text-center my-3">
+                <div class="average-header-maintext color-green" style="color: #5dc7c2; font-weight: 400; font-size: 50px;">0.52%</div>
+                <div class="average-header-subHeading" style="color: grey;font-size: 20px;">1 Hour</div>
+            </div>
+    
+            <div style="max-width: 40%;">
+                <div class="text-center font-32 average-block">
+                    <div class="average-subText">
+                        <span class="subText-heading" style="color: grey; font-size: 30px;">Best Price to Trade</span>
+                    </div>
+                    <div class="average-heading" style="padding-bottom: 10px; color: white; font-size: 70px;">₹ 36,71,153</div>
+                    <div class="average-subText" style="color: grey; font-size: 15px;">Average BTC/INR net price including commission</div>
+                </div>
+            </div>
+    
+            <div class="text-center my-3">
+                <div class="average-header-maintext color-green" style="color: #5dc7c2; font-weight: 400; font-size: 50px;">2.03%</div>
+                <div class="average-header-subHeading" style="color: grey; font-size: 20px;">1 Day</div>
+            </div>
+    
+            <div class="text-center my-3">
+                <div class="average-header-maintext color-green" style="color: #5dc7c2; font-weight: 400; font-size: 50px;">10.47%</div>
+                <div class="average-header-subHeading" style="color: grey; font-size: 20px;">7 Days</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <table class="table table-borderless text-center my-5">
+        <thead style="--bs-table-bg: #191d28;">
+            <tr >
+                <th>
+                    <h4><span class="pointer" style="color:grey">#</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer" style="color:grey">Platform</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer" style="color:grey">Last Traded Price</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer" style="color:grey">Buy / Sell Price</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer" style="color:grey">Difference</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer" style="color:grey">Savings</span></h4>
+                </th>
+            </tr>
+        </thead>
+        <!-- <tbody>
+            <tr style="--bs-table-bg:#2e3241" class="my-2">
+                <td class="align-middle my-2">
+                    <h4 class="table-text">1</h4>
+                </td>
+                <td class="align-middle">
+                    <a target="_blank" href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                        <h4 class="table-text">
+                            <img src="/" class="exchange-logo">
+                            <span class="exchange-name" style="color: white;">WazirX</span>
+                        </h4>
+                    </a>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text" style="color: white;">₹ 35,80,000</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text"><span style="color: white;">₹ 35,60,001 / ₹ 35,80,000</span></h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: red;">-2.48 %</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: green;">▼ ₹ 91,153</h4>
+                </td>
+            </tr>
+            <tr style="--bs-table-bg:#2e3241">
+                <td class="align-middle">
+                    <h4 class="table-text">1</h4>
+                </td>
+                <td class="align-middle">
+                    <a target="_blank" href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                        <h4 class="table-text">
+                            <img src="/" class="exchange-logo">
+                            <span class="exchange-name" style="color: white;">WazirX</span>
+                        </h4>
+                    </a>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text" style="color: white;">₹ 35,80,000</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text"><span style="color: white;">₹ 35,60,001 / ₹ 35,80,000</span></h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: red;">-2.48 %</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: green;">▼ ₹ 91,153</h4>
+                </td>
+            </tr>
+            <tr style="--bs-table-bg:#2e3241">
+                <td class="align-middle">
+                    <h4 class="table-text">1</h4>
+                </td>
+                <td class="align-middle">
+                    <a target="_blank" href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                        <h4 class="table-text">
+                            <img src="/" class="exchange-logo">
+                            <span class="exchange-name" style="color: white;">WazirX</span>
+                        </h4>
+                    </a>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text" style="color: white;">₹ 35,80,000</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text"><span style="color: white;">₹ 35,60,001 / ₹ 35,80,000</span></h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: red;">-2.48 %</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: green;">▼ ₹ 91,153</h4>
+                </td>
+            </tr>
+            <tr style="--bs-table-bg:#2e3241">
+                <td class="align-middle">
+                    <h4 class="table-text">1</h4>
+                </td>
+                <td class="align-middle">
+                    <a target="_blank" href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                        <h4 class="table-text">
+                            <img src="/" class="exchange-logo">
+                            <span class="exchange-name" style="color: white;">WazirX</span>
+                        </h4>
+                    </a>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text" style="color: white;">₹ 35,80,000</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text"><span style="color: white;">₹ 35,60,001 / ₹ 35,80,000</span></h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: red;">-2.48 %</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: green;">▼ ₹ 91,153</h4>
+                </td>
+            </tr>
+            <tr style="--bs-table-bg:#2e3241">
+                <td class="align-middle">
+                    <h4 class="table-text">1</h4>
+                </td>
+                <td class="align-middle">
+                    <a target="_blank" href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                        <h4 class="table-text">
+                            <img src="/" class="exchange-logo">
+                            <span class="exchange-name" style="color: white;">WazirX</span>
+                        </h4>
+                    </a>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text" style="color: white;">₹ 35,80,000</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text"><span style="color: white;">₹ 35,60,001 / ₹ 35,80,000</span></h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: red;">-2.48 %</h4>
+                </td>
+                <td class="align-middle">
+                    <h4 class="table-text color-red" style="color: green;">▼ ₹ 91,153</h4>
+                </td>
+            </tr> -->
+            <tbody id="tickerList"></tbody>
+            <!-- ... Repeat similar rows for other entries ... -->
+        <!-- </tbody> -->
+    </table>
+    
+    <h1>Top 10 WazirX Tickers</h1>
+    <ul id="tickerList"></ul>
+
+    <script>
+        async function fetchTop10() {
+          try {
+            const response = await fetch('/top10');
+            const data = await response.json();
+      
+            const tickerList = document.getElementById('tickerList');
+            tickerList.innerHTML = '';
+      
+            data.forEach((ticker, index) => {
+              const row = document.createElement('tr');
+              row.style = '--bs-table-bg:#2e3241';
+      
+              // Rank
+              const rankCell = document.createElement('td');
+              rankCell.className = 'align-middle';
+              const rankText = document.createElement('h4');
+              rankText.className = 'table-text';
+              rankText.textContent = (index + 1).toString();
+              rankCell.appendChild(rankText);
+              row.appendChild(rankCell);
+      
+              // Exchange
+              const exchangeCell = document.createElement('td');
+              exchangeCell.className = 'align-middle';
+              const exchangeLink = document.createElement('a');
+              exchangeLink.target = '_blank';
+              exchangeLink.href = 'https://wazirx.com/'; // Replace with the actual link
+              const exchangeLogo = document.createElement('img');
+              exchangeLogo.src = '/'; // Replace with the actual logo path
+              exchangeLogo.className = 'exchange-logo';
+              const exchangeName = document.createElement('span');
+              exchangeName.className = 'exchange-name';
+              exchangeName.style.color = 'white';
+              exchangeName.textContent = 'WazirX'; // Replace with the actual exchange name
+              exchangeLink.appendChild(exchangeLogo);
+              exchangeLink.appendChild(exchangeName);
+              const exchangeText = document.createElement('h4');
+              exchangeText.className = 'table-text';
+              exchangeText.appendChild(exchangeLink);
+              exchangeCell.appendChild(exchangeText);
+              row.appendChild(exchangeCell);
+      
+              // Last Price
+              const lastPriceCell = document.createElement('td');
+              lastPriceCell.className = 'align-middle';
+              const lastPriceText = document.createElement('h4');
+              lastPriceText.className = 'table-text';
+              lastPriceText.style.color = 'white';
+              lastPriceText.textContent = `₹ ${ticker.last}`;
+              lastPriceCell.appendChild(lastPriceText);
+              row.appendChild(lastPriceCell);
+      
+              // Buy / Sell Price
+              const priceCell = document.createElement('td');
+              priceCell.className = 'align-middle';
+              const priceText = document.createElement('h4');
+              priceText.className = 'table-text';
+              priceText.style.color = 'white';
+              priceText.textContent = `₹ ${ticker.buy} / ₹ ${ticker.sell}`;
+              priceCell.appendChild(priceText);
+              row.appendChild(priceCell);
+      
+              // Change (%)
+              const changePercentageCell = document.createElement('td');
+              changePercentageCell.className = 'align-middle';
+              const changePercentageText = document.createElement('h4');
+              changePercentageText.className = 'table-text color-red';
+              const change_percentage=(ticker.sell-ticker.buy)/ticker.buy*100;
+              if(change_percentage>0)
+                {changePercentageText.style.color = 'green';}
+                else if(change_percentage==0){
+                    changePercentageText.style.color = 'white';
+                    }
+                    else
+                    {changePercentageText.style.color = 'red';}
+              changePercentageText.textContent = `${change_percentage.toFixed(3)} %`;
+              changePercentageCell.appendChild(changePercentageText);
+              row.appendChild(changePercentageCell);
+      
+              // Change (Amount)
+              const changeAmountCell = document.createElement('td');
+              changeAmountCell.className = 'align-middle';
+              const changeAmountText = document.createElement('h4');
+              changeAmountText.className = 'table-text color-red';
+              const change_amount=ticker.sell-ticker.buy;
+              if(change_amount>0)
+              {changeAmountText.style.color = 'green';
+              changeAmountText.textContent = `▲ ₹ ${change_amount.toFixed(3)}`;}
+              else if(change_amount==0){
+                changeAmountText.style.color = 'white';
+                changeAmountText.textContent = `₹ ${change_amount.toFixed(3)}`;
+              }
+                else
+                {changeAmountText.style.color = 'red';
+                changeAmountText.textContent = `▼ ₹ ${change_amount.toFixed(3)}`;}
+              changeAmountCell.appendChild(changeAmountText);
+              row.appendChild(changeAmountCell);
+      
+              tickerList.appendChild(row);
+            });
+          } catch (error) {
+            console.error('Error fetching top 10 data', error);
+          }
+        }
+      
+        // Fetch top 10 on page load
+        fetchTop10();
+      </script>
+
+    
+    
+<!-- Add Bootstrap JS scripts -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- <script src="app.js"> -->
+</script>
+
+
+</body>
+</html>
